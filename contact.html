@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Contact — Smart Picks</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+<div class="wrap header-inner">
+<a class="brand" href="/">Smart Picks</a>
+<nav class="main-nav">
+<a href="/">Home</a>
+<a href="blog.html">Blog</a>
+<a href="about.html">About</a>
+</nav>
+</div>
+</header>
+<main class="wrap content">
+<h1>Contact</h1>
+<p>If you have a question about a review, sponsorship, or partnership, email: <a
+href="mailto:you@example.com">you@example.com</a></p>
+<form id="contactForm" class="contact-form">
+<label>
+Your name
+<input type="text" name="name" required>
+</label>
+<label>
+Email
+<input type="email" name="email" required>
+</label>
+<label>
+Message
+<textarea name="message" rows="6" required></textarea>
+</label>
+<button type="submit" class="button primary">Send</button>
+</form>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<p>© <span id="year4"></span> Smart Picks</p>
+</div>
+</footer>
+<script>
+document.getElementById('year4').textContent = new Date().getFullYear();
+document.getElementById('contactForm').addEventListener('submit', (e) => {
+e.preventDefault();
+alert('Thanks — contact form is a demo. Hook up your email service (Formspree/Netlify/
+SMTP) to receive messages.');
+});
+</script>
+</body>
+</html>
